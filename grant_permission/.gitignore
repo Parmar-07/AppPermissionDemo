@@ -16,3 +16,4 @@ gradlew
 gradle.bat
 gradle.properties
 /gradle
+/gradle/wrapper
