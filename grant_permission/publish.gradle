@@ -2,14 +2,17 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 version '1.0' // your library version
+artifactId 'parmar.lib' // whatever artifact Id you'd like
 group 'parmar.lib' // whatever group name you'd like
+
+
 
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/outputs/aar/bottomsheettimerangepicker-release.aar") // replace with your library name
+            artifact("$buildDir/outputs/aar/app-permission-release.aar") // replace with your library name
             groupId this.group
-            artifactId 'bottomsheettimerangepicker' // replace with your library artifact id
+            artifactId this.artifactId // replace with your library artifact id
             version this.version
 
             pom.withXml {
@@ -43,8 +46,8 @@ bintray {
     // Default: false. Whether version should be auto published after an upload
     publish = true
     pkg {
-        repo = 'BottomSheetTimeRangePicker' // the name of the repository you created on Bintray
-        name = 'com.adawoud.bottomsheettimerangepicker' // the name of the package you created inside it
+        repo = 'AppPermission' // the name of the repository you created on Bintray
+        name = 'app.grant.permission' // the name of the package you created inside it
         version {
             name = this.version
             released = new Date()
