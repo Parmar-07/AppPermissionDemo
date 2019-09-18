@@ -10,7 +10,7 @@ group 'parmar.lib' // whatever group name you'd like
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/outputs/aar/app-permission-release.aar") // replace with your library name
+            artifact("$buildDir/outputs/aar/grant_permission-release.aar") // replace with your library name
             groupId this.group
             artifactId this.artifactId // replace with your library artifact id
             version this.version

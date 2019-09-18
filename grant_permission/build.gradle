@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 
 android {
-    publishNonDefault true
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
 
