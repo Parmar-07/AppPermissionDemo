@@ -40,12 +40,11 @@ public class PermissionViewActivity extends AbstractPermissionView {
     @Override
     protected void accessMultiple(String[] permissions, PermissionListener listener) {
         AppPermission.grantMultiple(listener, permissions);
-
     }
 
     @Override
     protected void allowSettings(boolean isAllow) {
-        AppPermission.setForeceAllow(isAllow);
+        AppPermission.setForceAllow(isAllow);
     }
 
     @Override
