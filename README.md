@@ -1,7 +1,7 @@
-# Grant App Permissions
+
+# [Grant App Permissions-Demo.apk][0]
 
 Runtime Permission library to access system permissions in Android L or higher.
-
 
 ## Usage
 
@@ -147,3 +147,31 @@ To get the permission result, from `Activity` or `Fragment` need to <i>invokePer
 
 
 ```
+
+# Implementation
+Download the [@grant-app-permission-release.aar][1] file and copy to the libs folder, libs folder must be added to `project-level.gradle` file
+
+```gradle
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+```
+Add @aar file dependancy in `app-level.gradle` file
+
+```gradle
+
+dependencies {
+implementation(name:'grant-app-permission-release', ext:'aar')
+}
+
+```
+ [0]:https://github.com/Parmar-07/AppPermissionDemo/blob/master/app/demo/grant-permission-demo.apk
+ [1]:https://github.com/Parmar-07/AppPermissionDemo/blob/master/grant_permission/aar/grant-app-permission-release.aar
+
