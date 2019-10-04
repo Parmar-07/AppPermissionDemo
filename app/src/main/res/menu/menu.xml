@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/all"
+        android:checkable="true"
+        android:checked="false"
+        android:title="GrantAll"
+        app:actionViewClass="android.widget.CheckBox"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/multiple"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Single"
+        app:actionViewClass="android.widget.CheckBox"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/forceSetting"
+        android:checkable="true"
+        android:title="forceAllow"
+        app:actionViewClass="android.widget.CheckBox"
+        app:showAsAction="collapseActionView" />
+
+</menu>

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AppPermissionDemo</string>
+    <string name="app_name">Permissions Demo</string>
+    <string name="single">Single</string>
+    <string name="multiple">Multiple</string>
+    <string name="all">All</string>
+    <string name="clear">Clear</string>
+    <string name="manifest">Manifest Permissions</string>
 </resources>

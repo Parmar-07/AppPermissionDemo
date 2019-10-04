@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#1657B6</color>
+    <color name="colorAccent">#979191</color>
+    <color name="colorAccent2">#FFFFFF</color>
+    <color name="singleBG">#A86E43</color>
+    <color name="multipleBG">#9F57C4</color>
+    <color name="allBG">#D8508D</color>
+    <color name="grant">#4AA30E</color>
+    <color name="denied">#E7122B</color>
+
 </resources>

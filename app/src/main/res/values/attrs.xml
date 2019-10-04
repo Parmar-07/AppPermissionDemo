@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PermissionView">
+
+        <attr name="view_background_color" format="reference" />
+
+        <attr name="drawLock" format="reference" />
+        <attr name="resLock" format="reference" />
+        <attr name="tintLock" format="color" />
+
+        <attr name="name" format="string" />
+        <attr name="nameColor" format="color" />
+        <attr name="description" format="string" />
+        <attr name="descriptionColor" format="reference" />
+
+        <attr name="drawList" format="reference" />
+        <attr name="resList" format="reference" />
+        <attr name="tintList" format="color" />
+
+        <attr name="namevisibility" format="string"/>
+        <attr name="descriptionvisibility" format="string"/>
+        <attr name="lockvisibility" format="string"/>
+        <attr name="listvisibility" format="string"/>
+
+        <attr name="viewColor" format="color" />
+        <attr name="textScroll" format="boolean" />
+
+
+    </declare-styleable>
+
+</resources>

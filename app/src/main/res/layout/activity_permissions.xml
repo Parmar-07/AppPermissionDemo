@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="133dp"
+                android:padding="2dp"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/allowSetting"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:tag="0"
+                android:scaleType="fitCenter"
+                android:src="@drawable/setting_window"
+                android:tint="@android:color/white"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <com.permissiondemo.abstractView.PermissionView
+                android:id="@+id/singleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descriptionvisibility="gone"
+                app:drawList="@drawable/permission_list"
+                app:drawLock="@drawable/locked"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="1"
+                app:name="@string/single"
+                app:descriptionColor="@android:color/white"
+
+                app:viewColor="@color/allBG"
+                app:nameColor="@android:color/white"
+                app:tintList="@android:color/white"
+                app:tintLock="@android:color/white"
+                app:textScroll="true"
+                app:view_background_color="@color/singleBG"
+                tools:layout_editor_absoluteX="8dp" />
+
+
+
+            <com.permissiondemo.abstractView.PermissionView
+                android:id="@+id/multipleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descriptionvisibility="gone"
+                app:drawList="@drawable/permission_list"
+                app:drawLock="@drawable/locked"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/singleView"
+                app:layout_constraintVertical_weight="1"
+                app:name="@string/multiple"
+                app:viewColor="@color/singleBG"
+                app:textScroll="true"
+                app:descriptionColor="@android:color/white"
+
+                app:nameColor="@android:color/white"
+                app:tintList="@android:color/white"
+                app:tintLock="@android:color/white"
+                app:view_background_color="@color/multipleBG"
+                tools:layout_editor_absoluteX="8dp" />
+
+
+            <com.permissiondemo.abstractView.PermissionView
+                android:id="@+id/allView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:descriptionvisibility="gone"
+                app:drawList="@drawable/permission_list"
+                app:drawLock="@drawable/locked"
+                app:layout_constraintTop_toBottomOf="@+id/multipleView"
+                app:name="@string/all"
+                app:nameColor="@android:color/white"
+                app:descriptionColor="@android:color/white"
+                app:viewColor="@color/multipleBG"
+                app:textScroll="true"
+
+                app:tintList="@android:color/white"
+                app:tintLock="@android:color/white"
+                app:view_background_color="@color/allBG"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <com.permissiondemo.abstractView.PermissionView
+                android:id="@+id/clearView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:descriptionvisibility="gone"
+                app:drawList="@drawable/permission_list"
+                app:drawLock="@android:drawable/ic_menu_delete"
+                app:layout_constraintTop_toBottomOf="@+id/allView"
+                app:name="@string/clear"
+                app:nameColor="@android:color/white"
+                app:viewColor="@color/multipleBG"
+                app:textScroll="true"
+                app:tintList="@android:color/white"
+                app:tintLock="@android:color/white"
+                app:view_background_color="@color/colorAccent"
+                tools:layout_editor_absoluteX="8dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
