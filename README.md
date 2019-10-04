@@ -7,10 +7,19 @@ Runtime Permission library to access system permissions in Android L or higher.
 
 ### Step : 1
 Add app-level permissions in `mainifest` file
+Following list of <b>dangerous</b> permissions to grant on Runtime
 
 ```xml 
 
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -44,24 +53,76 @@ Grant the permissions from manifest `onClick()` method, <b><i>PermissionListener
 
 `onAppDenied()` will called when permission is denied
 
+# Grant Single
 
 ```java
-	final int requestCode = 1234;
-        grantButton.setOnClickListener(new View.OnClickListener() {
+       
+       singleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AppPermission.grant(requestCode, new PermissionListener() {
+                AppPermission.grantSingle(new PermissionListener() {
 
-
-                    @Override
+		    @Override
                     public void onAppGranted() {
-                        grantResult.setText("Permisison Granted");
+                        //TODO on granted.....
                     }
 
                     @Override
                     public void onAppDenied() {
-                        grantResult.setText("Permisison Denied");
+                         //TODO on denied.....
+                    }
 
+                },AppPermission.CAMERA);
+            }
+        });
+
+```
+
+
+# Grant Multiple
+
+```java
+       
+       multipleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppPermission.grantMultiple(new PermissionListener() {
+		
+		@Override
+                    public void onAppGranted() {
+                        //TODO on granted.....
+                    }
+
+                    @Override
+                    public void onAppDenied() {
+                         //TODO on denied.....
+                    }
+
+                },AppPermission.CAMERA,AppPermission.RECEIVE_SMS,<PERMISSIONS...>);
+            }
+        });
+
+```
+
+
+
+# Grant All
+
+```java
+       
+       allButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppPermission.grantAll(new PermissionListener() {
+		
+		@Override
+                    public void onAppGranted() {
+                        //TODO on granted.....
+                    }
+
+                    @Override
+                    public void onAppDenied() {
+                         //TODO on denied.....
                     }
 
                 });
@@ -69,7 +130,6 @@ Grant the permissions from manifest `onClick()` method, <b><i>PermissionListener
         });
 
 ```
-
 
 
 ### Step : 4
